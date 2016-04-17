@@ -18,6 +18,7 @@
                 <img id="venus" src="venusmap.jpg">
                 <img id="earth" src="earthmap2.jpg">
                 <img id="jupiter" src="jupitermap.jpg">
+                <img id="saturn" src="saturnmap.jpg">
             </a-assets>
 
             <a-entity geometry="primitive: sphere; radius: 50; segments 3600" depth="2" material="src: #mars" position="70 0.2 200"></a-entity>
@@ -42,6 +43,12 @@
                              repeat="indefinite">
                 </a-animation>
             </a-entity>
+
+            <a-entity geometry="primitive: sphere; radius: 40; segments 3600" depth="2" material="src: #saturn" position="-120 0.2 280">
+                <a-ring></a-ring>
+            </a-entity>
+
+            <a-entity geometry="primitive: ring; radiusInner: 30; radiusOuter: 1" color="#31c178"></a-entity>
 
               <a-entity camera look-controls false></a-entity>
             <a-sky color="#000"></a-sky>
