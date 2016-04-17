@@ -1,36 +1,50 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Page avec A-Frame</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="aframe.js"></script>
-    <!-- <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script> -->
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Page avec A-Frame</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="aframe.js"></script>
+        <!-- <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script> -->
+    </head>
+    <body>
 
-    <a-scene>
-      <a-assets>
-        <img id="mars" src="mars.jpg">
-        <img id="soleil" src="sunmap.jpg">
-        <img id="mercure" src="mercurymap.jpg">
-        <img id="venus" src="venusmap.jpg">
-        <img id="earth" src="earthmap2.jpg">
-      </a-assets>
-      <a-entity geometry="primitive: sphere; radius: 50; segments 4000" depth="2" material="src: #mars" position="70 0.2 200"></a-entity>
-      <a-entity geometry="primitive: sphere; radius: 20; segments 4000" depth="2" material="src: #soleil" position="60 3 100"></a-entity>
-      <a-entity geometry="primitive: sphere; radius: 0.5; segments 4000" depth="2" material="src: #mercure" position="80 0.2 2"></a-entity>
-      <a-entity geometry="primitive: sphere; radius: 0.5; segments 4000" depth="2" material="src: #venus" position="80 0.2 2"></a-entity>
-      <a-entity geometry="primitive: sphere; radius: 30; segments 4000" depth="5" material="src: #earth" position="80 0.2 2">
-        <a-animation attribute="rotation"
-               dur="10000"
-               fill="forwards"
-               to="0 360"
-               repeat="indefinite"></a-animation>
-      </a-entity>
+        <a-scene>
 
+            <a-assets>
+                <img id="mars" src="mars.jpg">
+                <img id="soleil" src="soleil.gif">
+                <img id="mercure" src="mercurymap.jpg">
+                <img id="venus" src="venusmap.jpg">
+                <img id="earth" src="earthmap2.jpg">
+                <img id="jupiter" src="jupitermap.jpg">
+            </a-assets>
 
+            <a-entity geometry="primitive: sphere; radius: 50; segments 3600" depth="2" material="src: #mars" position="70 0.2 200"></a-entity>
+            <a-entity geometry="primitive: sphere; radius: 20; segments 3600" depth="2" material="src: #soleil" position="60 3 100"></a-entity>
+            <a-entity geometry="primitive: sphere; radius: 0.5; segments 3600" depth="2" material="src: #mercure" position="80 0.2 2"></a-entity>
+            <a-entity geometry="primitive: sphere; radius: 0.5; segments 3600" depth="2" material="src: #venus" position="80 0.2 2"></a-entity>
 
-      <a-sky color="#000"></a-sky>
+            <a-entity geometry="primitive: sphere; radius: 30; segments 3600" depth="5" material="src: #earth" position="80 0.2 2">
+                <a-animation attribute="rotation"
+                             dur="10000"
+                             fill="forwards"
+                             to="0 360"
+                             repeat="indefinite">
+                </a-animation>
+            </a-entity>
+
+            <a-entity geometry="primitive: sphere; radius: 30; segments 3600" depth="2" material="src: #jupiter" position="-20 0.2 290">
+                <a-animation attribute="rotation"
+                             dur="10000"
+                             fill="forwards"
+                             to="0 360"
+                             repeat="indefinite">
+                </a-animation>
+            </a-entity>
+
+              <a-entity camera look-controls false></a-entity>
+            <a-sky color="#000"></a-sky>
 
     </a-scene>
   </body>
