@@ -19,41 +19,46 @@
                 <img id="earth" src="earthmap2.jpg">
                 <img id="jupiter" src="jupitermap.jpg">
                 <img id="saturn" src="saturnmap.jpg">
+                <img id="moon" src="moon.jpg">
+
+                <img id="moon2" src="moon2.jpg">
+                <img id="jupiter2" src="jupitermap2.jpg">
             </a-assets>
 
-            <a-entity geometry="primitive: sphere; radius: 50; segments 3600" depth="2" material="src: #mars" position="70 0.2 200"></a-entity>
-            <a-entity geometry="primitive: sphere; radius: 70; segments 3600" depth="2" material="src: #soleil" position="60 120 100" ></a-entity>
+            <!-- <a-entity geometry="primitive: sphere; radius: 50; segments 3600" depth="2" material="src: #mars" position="70 0.2 200"></a-entity>
+            <a-entity geometry="primitive: sphere; radius: 20; segments 3600" depth="2" material="src: #soleil" position="60 120 100" ></a-entity>
             <a-entity geometry="primitive: sphere; radius: 0.5; segments 3600" depth="2" material="src: #mercure" position="80 0.2 2"></a-entity>
-            <a-entity geometry="primitive: sphere; radius: 0.5; segments 3600" depth="2" material="src: #venus" position="80 0.2 2"></a-entity>
+            <a-entity geometry="primitive: sphere; radius: 0.5; segments 3600" depth="2" material="src: #venus" position="80 0.2 2"></a-entity> -->
 
-            <a-entity geometry="primitive: sphere; radius: 30; segments 3600" depth="5" material="src: #earth" position="80 0.2 2">
+            <!-- <a-entity geometry="primitive: sphere; radius: 30; segments 3600" depth="5" material="src: #earth" position="80 0.2 2">
                 <a-animation attribute="rotation"
                              dur="10000"
                              fill="forwards"
                              to="0 360"
                              repeat="indefinite">
                 </a-animation>
-            </a-entity>
+            </a-entity> -->
 
-            <a-entity geometry="primitive: sphere; radius: 30; segments 3600" depth="2" material="src: #jupiter" position="-20 0.2 290">
+            <!-- <a-entity geometry="primitive: sphere; radius: 80; segments 3600" depth="2" material="src: #jupiter" position="-20 120 290">
                 <a-animation attribute="rotation"
                              dur="10000"
                              fill="forwards"
                              to="0 360"
                              repeat="indefinite">
                 </a-animation>
+            </a-entity> -->
+
+            <a-entity geometry="primitive: sphere; radius: 60; segments 3600" depth="2" material="src: #saturn; side: double;" position="-80 0.2 280">
+                <a-entity geometry="primitive: ring; radiusInner: 20; radiusOuter: 100;" material="src: #mars"></a-entity>
             </a-entity>
 
-            <a-entity geometry="primitive: sphere; radius: 60; segments 3600" depth="2" material="src: #saturn" position="-120 0.2 280">
-                <a-ring color="green" radius-inner="1" radius-outer="2"></a-ring>
+            <!-- Ring -->
 
-                <!-- Textured ring. -->
-                <a-ring src="#soleil"></a-ring>
-            </a-entity>
+            <!-- Fin du ring -->
+            <!-- <a-entity geometry="primitive: ring; radiusInner: 30; radiusOuter: 30" color="#31c178"></a-entity> -->
 
-            <a-entity geometry="primitive: ring; radiusInner: 30; radiusOuter: 30" color="#31c178"></a-entity>
+            <a-entity geometry="primitive: sphere; radius: 100; segments 3600" depth="2" material="src: #moon2" position="-210 0.2 280" rotation="130 0 0"></a-entity>
 
-              <a-entity camera look-controls false></a-entity>
             <a-sky color="#000"></a-sky>
 
     </a-scene>
